@@ -750,6 +750,224 @@
             border: 1px solid var(--glass-border);
         }
 
+        /* Blog Section */
+        .blog {
+            background: linear-gradient(135deg, rgba(12, 12, 12, 0.8) 0%, rgba(26, 26, 26, 0.8) 100%);
+        }
+
+        .blog-platforms {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .blog-platform-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-platform-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--accent-gradient);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .blog-platform-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .blog-platform-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-card);
+        }
+
+        .blog-platform-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-platform-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--accent-gradient);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(79, 172, 254, 0.3);
+        }
+
+        .blog-platform-info h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-platform-stats {
+            color: var(--text-accent);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .blog-platform-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-platform-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .blog-link {
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .blog-link.primary {
+            background: var(--accent-gradient);
+            color: white;
+        }
+
+        .blog-link.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);
+        }
+
+        .blog-link.secondary {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            color: var(--text-primary);
+        }
+
+        .blog-link.secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .blog-featured h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .featured-articles {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .featured-article {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .featured-article:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .article-category {
+            display: inline-block;
+            background: var(--accent-gradient);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+        }
+
+        .featured-article h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .featured-article p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .article-link {
+            color: var(--text-accent);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .article-link:hover {
+            color: var(--text-primary);
+            transform: translateX(5px);
+        }
+
+        .blog-cta {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .blog-cta h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .blog-cta p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .blog-cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
         /* Contact Section */
         .contact {
             background: linear-gradient(135deg, rgba(12, 12, 12, 0.9) 0%, rgba(26, 26, 26, 0.9) 100%);
@@ -1088,6 +1306,16 @@
                 grid-template-columns: 1fr;
             }
             
+            .blog-platforms {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .blog-cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
             .contact-grid {
                 grid-template-columns: 1fr;
             }
@@ -1122,6 +1350,7 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -1132,10 +1361,12 @@
             <div class="hero-grid">
                 <div class="hero-content">
                     <div class="hero-badge">🚀 VP & Head of Engineering</div>
-                    <h1>Subhrajit Mohanty</h1>
-                    <p class="subtitle">GenAI & MLOps Leader</p>
+                    <h1>GenAI & MLOps Leader</h1>
+                    <p class="subtitle">Transforming Businesses Through AI Innovation</p>
                     <p class="description">
-                        Transforming organizations through cutting-edge AI solutions. Leading diverse teams of AI researchers, engineers, and data scientists to build revolutionary GenAI and MLOps platforms that drive business growth.
+                        Entrepreneur, Leader and Architect with a proven record of transforming underperforming organizations into revenue leaders. 
+                        As VP & Head of Engineering at Katonic, I lead diverse teams of AI researchers, engineers, and data scientists in developing 
+                        cutting-edge GenAI and MLOps solutions. Known for strategic technical vision and exceptional team building capabilities.
                     </p>
                     <div class="hero-buttons">
                         <a href="#contact" class="btn-primary">
@@ -1164,7 +1395,7 @@
                 <div class="about-content">
                     <h2>About Me</h2>
                     <p>
-                        I'm a visionary technology leader with 10+ years of experience revolutionizing businesses through innovative AI and data solutions. As VP & Head of Engineering at Katonic, I architect the future of GenAI, leading teams that push the boundaries of what's possible.
+                        I'm a visionary technology leader with 15+ years of experience revolutionizing businesses through innovative AI and data solutions. As VP & Head of Engineering at Katonic, I architect the future of GenAI, leading teams that push the boundaries of what's possible.
                     </p>
                     <p>
                         My journey from developer to senior leadership spans startups to Fortune 500 companies, where I've built award-winning MLOps platforms and groundbreaking GenAI solutions recognized by industry leaders like Everest Group and Frost & Sullivan.
@@ -1360,10 +1591,79 @@
                             <div class="achievement-category">Content & Community</div>
                         </div>
                     </div>
-                    <p>60+ technical articles, tutorials, and industry insights covering GenAI, MLOps, and emerging technologies.</p>
+                    <p>100+ technical articles, tutorials, and industry insights covering GenAI, MLOps, and emerging technologies published on Medium.</p>
                     <div class="achievement-links">
-                        <a href="#" class="achievement-link">📖 Read Articles</a>
+                        <a href="https://medium.com/@subhraj07" class="achievement-link" target="_blank">📖 Read Articles</a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section blog fade-in" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Blog & Insights</h2>
+                <p class="section-subtitle">60+ articles sharing deep insights on GenAI, MLOps, and emerging technologies</p>
+            </div>
+            
+            <div class="blog-platforms">
+                <div class="blog-platform-card">
+                    <div class="blog-platform-header">
+                        <div class="blog-platform-icon">📝</div>
+                        <div class="blog-platform-info">
+                            <h3>Medium</h3>
+                            <p class="blog-platform-stats">60+ Articles</p>
+                        </div>
+                    </div>
+                    <p class="blog-platform-description">
+                        Comprehensive technical articles covering GenAI implementations, MLOps best practices, and industry insights that help professionals stay ahead in the AI revolution.
+                    </p>
+                    <div class="blog-platform-links">
+                        <a href="https://medium.com/@subhraj07" class="blog-link primary" target="_blank">
+                            📖 Read All Articles
+                        </a>
+                        <a href="https://medium.com/@subhraj07/latest" class="blog-link secondary" target="_blank">
+                            🔥 Latest Posts
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="blog-featured">
+                    <h3>Featured Articles</h3>
+                    <div class="featured-articles">
+                        <div class="featured-article">
+                            <div class="article-category">MLOps</div>
+                            <h4>Building Production-Ready MLOps Pipelines</h4>
+                            <p>A comprehensive guide to designing and implementing scalable MLOps workflows for enterprise applications.</p>
+                            <a href="https://medium.com/@subhraj07" class="article-link" target="_blank">Read More →</a>
+                        </div>
+                        <div class="featured-article">
+                            <div class="article-category">GenAI</div>
+                            <h4>Fine-tuning LLMs for Business Applications</h4>
+                            <p>Best practices and strategies for customizing large language models to meet specific business requirements.</p>
+                            <a href="https://medium.com/@subhraj07" class="article-link" target="_blank">Read More →</a>
+                        </div>
+                        <div class="featured-article">
+                            <div class="article-category">Leadership</div>
+                            <h4>Building High-Performance AI Teams</h4>
+                            <p>Insights on recruiting, managing, and scaling AI engineering teams in fast-paced startup environments.</p>
+                            <a href="https://medium.com/@subhraj07" class="article-link" target="_blank">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="blog-cta">
+                <h3>Stay Updated</h3>
+                <p>Get notified about new articles and insights</p>
+                <div class="blog-cta-buttons">
+                    <a href="https://medium.com/@subhraj07" class="btn-primary" target="_blank">
+                        🔔 Follow on Medium
+                    </a>
+                    <a href="https://twitter.com/subhraj07" class="btn-secondary" target="_blank">
+                        📱 Follow on Twitter
+                    </a>
                 </div>
             </div>
         </div>
@@ -1396,6 +1696,10 @@
                         <div class="contact-icon">🐦</div>
                         <h3>Twitter</h3>
                         <p>@subhraj07</p>
+                    </a>
+                </div>raj07</p>
+                    </a>
+                </div>raj07</p>
                     </a>
                 </div>
             </div>
@@ -1541,7 +1845,7 @@
             } else if (lowerMessage.includes('collaborate') || lowerMessage.includes('work')) {
                 return "Subhrajit is open to collaboration! Reach out at subhrajit.mohanty@outlook.com or connect via LinkedIn. He's particularly interested in GenAI and MLOps projects that can drive business transformation.";
             } else if (lowerMessage.includes('experience')) {
-                return "With 10+ years of experience, Subhrajit has progressed from developer to VP & Head of Engineering, building award-winning teams and transforming organizations through strategic AI implementations.";
+                return "With 15+ years of experience, Subhrajit has progressed from developer to VP & Head of Engineering, building award-winning teams and transforming organizations through strategic AI implementations.";
             } else if (lowerMessage.includes('skills')) {
                 return "His expertise includes Python, R, SQL, PySpark, FastAPI, AWS, Kubernetes, and advanced AI/ML technologies. He specializes in cloud architecture and scalable data engineering solutions.";
             } else if (lowerMessage.includes('awards')) {
