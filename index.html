@@ -41,21 +41,21 @@
             padding: 0 2rem;
         }
 
-        /* Advanced Header */
+        /* Fixed Header */
         .header {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(12, 12, 12, 0.9);
+            background: rgba(12, 12, 12, 0.95);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .header.scrolled {
-            background: rgba(12, 12, 12, 0.95);
+            background: rgba(12, 12, 12, 0.98);
             box-shadow: var(--shadow-card);
         }
 
@@ -63,11 +63,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 0;
+            padding: 1rem 0;
+            height: 70px;
         }
 
         .logo {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 800;
             background: var(--accent-gradient);
             background-clip: text;
@@ -75,6 +76,7 @@
             -webkit-text-fill-color: transparent;
             text-decoration: none;
             transition: all 0.3s ease;
+            white-space: nowrap;
         }
 
         .logo:hover {
@@ -84,18 +86,20 @@
 
         .nav-links {
             display: flex;
-            gap: 2.5rem;
+            gap: 2rem;
             list-style: none;
+            align-items: center;
         }
 
         .nav-links a {
             color: var(--text-secondary);
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             position: relative;
             transition: all 0.3s ease;
             letter-spacing: 0.5px;
+            white-space: nowrap;
         }
 
         .nav-links a::before {
@@ -119,7 +123,18 @@
             width: 100%;
         }
 
-        /* Hero Section - Completely Redesigned */
+        /* Mobile menu toggle */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        /* Hero Section - Fixed */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -127,6 +142,7 @@
             position: relative;
             background: var(--dark-gradient);
             overflow: hidden;
+            padding-top: 70px;
         }
 
         .hero::before {
@@ -192,7 +208,7 @@
         }
 
         .hero h1 {
-            font-size: 4.5rem;
+            font-size: 3.5rem;
             font-weight: 900;
             line-height: 1.1;
             margin-bottom: 1.5rem;
@@ -204,7 +220,7 @@
         }
 
         .hero .subtitle {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 2rem;
             background: var(--secondary-gradient);
@@ -214,7 +230,7 @@
         }
 
         .hero .description {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--text-secondary);
             margin-bottom: 3rem;
             line-height: 1.8;
@@ -305,14 +321,14 @@
         }
 
         .hero-avatar {
-            width: 400px;
-            height: 400px;
+            width: 350px;
+            height: 350px;
             border-radius: 50%;
             background: var(--accent-gradient);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 120px;
+            font-size: 100px;
             box-shadow: var(--shadow-glow);
             position: relative;
             overflow: hidden;
@@ -379,9 +395,9 @@
             50% { transform: translateY(-20px) rotate(180deg); }
         }
 
-        /* Modern Section Styles */
+        /* Section Styles */
         .section {
-            padding: 8rem 0;
+            padding: 6rem 0;
             position: relative;
         }
 
@@ -391,7 +407,7 @@
         }
 
         .section-title {
-            font-size: 3.5rem;
+            font-size: 2.8rem;
             font-weight: 800;
             margin-bottom: 1rem;
             background: linear-gradient(135deg, #ffffff 0%, #4facfe 100%);
@@ -401,7 +417,7 @@
         }
 
         .section-subtitle {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: var(--text-secondary);
             max-width: 600px;
             margin: 0 auto;
@@ -415,12 +431,12 @@
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 5rem;
+            gap: 4rem;
             align-items: center;
         }
 
         .about-content h2 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 800;
             margin-bottom: 2rem;
             background: var(--accent-gradient);
@@ -443,14 +459,14 @@
         }
 
         .about-image {
-            width: 350px;
-            height: 350px;
+            width: 300px;
+            height: 300px;
             border-radius: 30px;
             background: var(--accent-gradient);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 100px;
+            font-size: 80px;
             box-shadow: var(--shadow-glow);
             position: relative;
             overflow: hidden;
@@ -767,7 +783,7 @@
             backdrop-filter: blur(20px);
             border: 1px solid var(--glass-border);
             border-radius: 20px;
-            padding: 2.5rem;
+            padding: 2rem;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -1023,7 +1039,7 @@
             font-size: 0.9rem;
         }
 
-        /* Chatbot - Enhanced */
+        /* Chatbot */
         .chatbot-container {
             position: fixed;
             bottom: 2rem;
@@ -1240,6 +1256,10 @@
 
         /* Responsive Design */
         @media (max-width: 1024px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+
             .hero-grid {
                 grid-template-columns: 1fr;
                 gap: 3rem;
@@ -1264,6 +1284,10 @@
             .experience-item::before {
                 left: -55px !important;
             }
+
+            .blog-platforms {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 768px) {
@@ -1274,13 +1298,17 @@
             .nav-links {
                 display: none;
             }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
             
             .hero h1 {
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
             
             .hero .subtitle {
-                font-size: 1.4rem;
+                font-size: 1.2rem;
             }
             
             .hero-buttons {
@@ -1289,26 +1317,21 @@
             }
             
             .hero-avatar {
-                width: 300px;
-                height: 300px;
-                font-size: 80px;
+                width: 250px;
+                height: 250px;
+                font-size: 60px;
             }
             
             .section-title {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
             
             .skills-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             }
             
             .achievements-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .blog-platforms {
-                grid-template-columns: 1fr;
-                gap: 2rem;
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             }
             
             .blog-cta-buttons {
@@ -1321,9 +1344,42 @@
             }
             
             .chatbot-window {
-                width: 350px;
+                width: 90vw;
+                height: 70vh;
                 bottom: 80px;
-                right: -1rem;
+                right: 5vw;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+
+            .hero .description {
+                font-size: 0.9rem;
+            }
+
+            .btn-primary, .btn-secondary {
+                padding: 1rem 2rem;
+                font-size: 0.9rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .skill-card, .achievement-card {
+                padding: 1.5rem;
+            }
+
+            .chatbot-window {
+                width: 95vw;
+                right: 2.5vw;
             }
         }
 
@@ -1353,6 +1409,7 @@
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="mobile-menu-toggle">☰</button>
         </nav>
     </header>
 
@@ -1507,6 +1564,30 @@
                         </div>
                     </div>
                 </div>
+                <div class="experience-item">
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3 class="experience-title">Senior Software Engineer</h3>
+                            <p class="experience-company">Infosys, Grand Thornton</p>
+                            <span class="experience-period">Feb 2014 - Oct 2017</span>
+                        </div>
+                        <div class="experience-description">
+                            Worked closely with the business team to convert functional requirements to technical specifications. Development and enhancement of Analysis/Reporting pipeline. Responsible for Design and Development of Big Data components. Compiled, cleaned, and manipulated data for proper handling. Consulted different teams under the guidance of CoE on performance improvement and optimization of various applications.
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3 class="experience-title">Freelancer</h3>
+                            <p class="experience-company">Independent</p>
+                            <span class="experience-period">Aug 2012 - Feb 2014</span>
+                        </div>
+                        <div class="experience-description">
+                            Design and develop highly scalable, efficient, robust & fault-tolerant Big Data systems and solutions. Implemented complex Big Data projects by gathering, parsing, managing, analyzing, interpreting, and visualizing large datasets to extract valuable insights and convert those insights into actionable business decisions.
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1623,7 +1704,7 @@
                         <a href="https://medium.com/@subhraj07" class="blog-link primary" target="_blank">
                             📖 Read All Articles
                         </a>
-                        <a href="https://medium.com/@subhraj07/latest" class="blog-link secondary" target="_blank">
+                        <a href="https://medium.com/@subhraj07" class="blog-link secondary" target="_blank">
                             🔥 Latest Posts
                         </a>
                     </div>
@@ -1633,22 +1714,22 @@
                     <h3>Featured Articles</h3>
                     <div class="featured-articles">
                         <div class="featured-article">
-                            <div class="article-category">MLOps</div>
-                            <h4>Building Production-Ready MLOps Pipelines</h4>
-                            <p>A comprehensive guide to designing and implementing scalable MLOps workflows for enterprise applications.</p>
-                            <a href="https://medium.com/@subhraj07" class="article-link" target="_blank">Read More →</a>
-                        </div>
-                        <div class="featured-article">
                             <div class="article-category">GenAI</div>
-                            <h4>Fine-tuning LLMs for Business Applications</h4>
-                            <p>Best practices and strategies for customizing large language models to meet specific business requirements.</p>
-                            <a href="https://medium.com/@subhraj07" class="article-link" target="_blank">Read More →</a>
+                            <h4>How to Build an OpenAI-Compatible API</h4>
+                            <p>A comprehensive guide to building an OpenAI-compatible API using FastAPI with seamless LLM integration for developers looking to deploy intelligent, scalable AI applications.</p>
+                            <a href="https://medium.com/@subhraj07/how-to-build-an-openai-compatible-api-for-any-fastapi-application-with-llm-integration-a-0d1f1dfe77c1" class="article-link" target="_blank">Read More →</a>
                         </div>
                         <div class="featured-article">
-                            <div class="article-category">Leadership</div>
-                            <h4>Building High-Performance AI Teams</h4>
-                            <p>Insights on recruiting, managing, and scaling AI engineering teams in fast-paced startup environments.</p>
-                            <a href="https://medium.com/@subhraj07" class="article-link" target="_blank">Read More →</a>
+                            <div class="article-category">Devops</div>
+                            <h4>Building a Secure Cloud IDE</h4>
+                            <p>Best practices and strategies for deploying a secure cloud IDE using VS Code on Kubernetes, integrated with Keycloak for authentication and access control.</p>
+                            <a href="https://medium.com/@subhraj07/vs-code-extensions-that-supercharge-your-cursor-experience-30e025363483" class="article-link" target="_blank">Read More →</a>
+                        </div>
+                        <div class="featured-article">
+                            <div class="article-category">Cloud</div>
+                            <h4>Deploying a FastAPI Application on Azure</h4>
+                            <p>Insights on deploying FastAPI applications on Azure, covering everything from serverless functions to scaling with Kubernetes in modern cloud-native environments.</p>
+                            <a href="https://medium.com/@subhraj07/deploying-a-fastapi-application-on-azure-from-serverless-to-kubernetes-95fba215d87f" class="article-link" target="_blank">Read More →</a>
                         </div>
                     </div>
                 </div>
@@ -1687,7 +1768,7 @@
                         <h3>LinkedIn</h3>
                         <p>Professional Network</p>
                     </a>
-                    <a href="https://github.com/Subhraj07" class="contact-card" target="_blank">
+                    <a href="https://github.com/subhrajit-mohanty" class="contact-card" target="_blank">
                         <div class="contact-icon">🐙</div>
                         <h3>GitHub</h3>
                         <p>Open Source Projects</p>
@@ -1696,10 +1777,6 @@
                         <div class="contact-icon">🐦</div>
                         <h3>Twitter</h3>
                         <p>@subhraj07</p>
-                    </a>
-                </div></p>
-                    </a>
-                </div></p>
                     </a>
                 </div>
             </div>
@@ -1838,22 +1915,31 @@
         function getBotResponse(message) {
             const lowerMessage = message.toLowerCase();
             
-            if (lowerMessage.includes('genai') || lowerMessage.includes('generative ai')) {
-                return "Subhrajit has extensive experience leading GenAI initiatives at Katonic, including fine-tuning applications for industry-specific use cases and developing production-grade AI solutions that drive business transformation.";
+           if (lowerMessage.includes('genai') || lowerMessage.includes('generative ai')) {
+                return "Subhrajit leads Generative AI initiatives as VP & Head of Engineering at Katonic. From enterprise-grade LLM solutions to domain-specific fine-tuning, he has built scalable, production-ready GenAI platforms and delivered high-impact business outcomes.";
             } else if (lowerMessage.includes('mlops')) {
-                return "As an MLOps expert, Subhrajit has deep knowledge in Kubeflow, scalable framework design, and end-to-end ML pipelines. He's been recognized in the Everest report for working at one of the Best MLOps companies.";
+                return "Recognized in the Everest report, Subhrajit is an MLOps thought leader. He architected the Katonic MLOps platform, published a top-rated MLOps course on Udemy, and has spoken at global forums like Analytics Vidhya and CMG.";
             } else if (lowerMessage.includes('collaborate') || lowerMessage.includes('work')) {
-                return "Subhrajit is open to collaboration! Reach out at subhrajit.mohanty@outlook.com or connect via LinkedIn. He's particularly interested in GenAI and MLOps projects that can drive business transformation.";
+                return "Subhrajit is open to meaningful collaborations in GenAI, MLOps, or AI-led transformation initiatives. Reach out via subhrajit.mohanty@outlook.com or connect on LinkedIn. He’s always excited to brainstorm and build with visionary teams.";
             } else if (lowerMessage.includes('experience')) {
-                return "With 15+ years of experience, Subhrajit has progressed from developer to VP & Head of Engineering, building award-winning teams and transforming organizations through strategic AI implementations.";
+                return "Subhrajit brings 15+ years of experience, evolving from developer to VP & Head of Engineering. He’s built award-winning teams and engineered AI products that reshape enterprise operations.";
             } else if (lowerMessage.includes('skills')) {
-                return "His expertise includes Python, R, SQL, PySpark, FastAPI, AWS, Kubernetes, and advanced AI/ML technologies. He specializes in cloud architecture and scalable data engineering solutions.";
+                return "His core skills include Python, R, SQL, PySpark, FastAPI, AWS, Azure, Kubernetes, and advanced MLOps/GenAI frameworks. He's a strong advocate of scalable data platforms and cloud-native AI architectures.";
             } else if (lowerMessage.includes('awards')) {
-                return "Subhrajit has received prestigious awards including Best Product Demo Award at Comsnet 2022, Frost & Sullivan recognition, and he's an Arctic Code Vault Contributor on GitHub.";
+                return "Subhrajit has earned the Best Product Demo Award at Comsnet 2022, recognition from Frost & Sullivan in 2023, and is an Arctic Code Vault Contributor for his open-source contributions.";
+            } else if (lowerMessage.includes('courses') || lowerMessage.includes('talks') || lowerMessage.includes('public')) {
+                return "Subhrajit is a passionate educator and speaker. He created a top-rated MLOps course on Udemy and has delivered sessions at Analytics Vidhya's DataHour and CMG’s GenAI forum.";
             } else {
-                return "That's a great question! For detailed discussions about Subhrajit's expertise in GenAI and MLOps, I'd recommend reaching out directly at subhrajit.mohanty@outlook.com. He's always excited to discuss innovative AI solutions!";
+                return "That's a great question! For more details about Subhrajit's expertise in GenAI, MLOps, or leadership in AI, feel free to reach out at subhrajit.mohanty@outlook.com. Always happy to connect!";
             }
+
         }
+
+        // Mobile menu toggle functionality
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
 
         // Add some dynamic effects
         document.addEventListener('DOMContentLoaded', function() {
