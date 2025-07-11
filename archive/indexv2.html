@@ -1993,7 +1993,7 @@
             });
         });
 
-        // Enhanced Chatbot functionality with updated API integration
+        // Enhanced Chatbot functionality with real API integration
         function toggleChatbot() {
             const chatbotWindow = document.getElementById('chatbot-window');
             chatbotWindow.classList.toggle('active');
@@ -2221,22 +2221,19 @@ User question: ${message}`;
                     method: 'POST',
                     headers: {
                         'accept': 'application/json',
-                        'Authorization': 'Bearer {{API_KEY}}',
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
-                        model: "auto",
+                        model: "llama-3.3-70b-versatile",
                         messages: [
                             {
                                 role: "user",
                                 content: contextPrompt
                             }
                         ],
-                        max_tokens: 1024,
                         temperature: 0.7,
                         stream: true,
-                        top_p: 1,
-                        provider: "random"
+                        top_p: 1
                     })
                 });
 
